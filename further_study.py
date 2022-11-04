@@ -16,7 +16,7 @@ def custom_len(input_list):
 
     """
 
-    return 0
+    return len(input_list)
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -41,10 +41,14 @@ def custom_append(input_list, value):
         >>> custom_append(notes, 'Re')
         >>> notes == ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do', 'Re']
         True
+        # len(input_list)+1]=[value]
 
     """
-
+    input_list[len(input_list):len(input_list)]=[value]      
+    # input_list
     pass
+
+
 
 
 def custom_extend(input_list, second_list):
@@ -62,7 +66,7 @@ def custom_extend(input_list, second_list):
         True
 
     """
-
+    input_list.extend(second_list)
     pass
 
 
@@ -80,7 +84,7 @@ def custom_insert(input_list, index, value):
         True
 
     """
-
+    input_list.insert(index,value)
     pass
 
 
@@ -99,7 +103,7 @@ def custom_remove(input_list, value):
         True
 
     """
-
+    input_list.remove(value)
     pass
 
 
@@ -118,7 +122,7 @@ def custom_pop(input_list):
         ['Jan', 'Feb']
 
     """
-
+    input_list.pop()
     return None
 
 
@@ -134,7 +138,7 @@ def custom_index(input_list, value):
         1
 
     """
-
+    input_list.index(value[0])
     return 0
 
 
@@ -150,7 +154,7 @@ def custom_count(input_list, value):
         2
 
     """
-
+    input_list.count(0, -1, value)
     return 0
 
 
@@ -169,7 +173,7 @@ def custom_reverse(input_list):
         True
 
     """
-
+    input_list.reverse()
     pass
 
 
@@ -189,7 +193,8 @@ def custom_contains(input_list, value):
         True
 
     """
-
+    
+    input_list.find([value])
     return None
 
 
@@ -208,5 +213,6 @@ def custom_equality(some_list, another_list):
         False
 
     """
-
+     
+    some_list.sort()
     return None
